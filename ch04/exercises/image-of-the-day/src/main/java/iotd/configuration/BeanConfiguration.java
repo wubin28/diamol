@@ -1,5 +1,7 @@
-package iotd;
+package iotd.configuration;
 
+import iotd.services.CacheService;
+import iotd.services.MemoryCacheService;
 import org.springframework.context.annotation.Bean;
 
 public class BeanConfiguration {

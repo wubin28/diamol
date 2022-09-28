@@ -1,12 +1,13 @@
-package iotd;
+package iotd.controllers;
 
+import iotd.models.ApodImage;
+import iotd.models.Image;
+import iotd.services.CacheService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -16,7 +17,7 @@ public class ImageController {
     private static final Logger log = LoggerFactory.getLogger(ImageController.class);
 
 	@Autowired
-	CacheService cacheService;
+    CacheService cacheService;
     
     @Value("${apod.url}")
 	private String apodUrl;

@@ -1,15 +1,16 @@
-package iotd;
+package iotd.services;
 
-import java.util.concurrent.TimeUnit;
-import org.ehcache.config.CacheConfiguration;
+import iotd.models.Image;
+import org.ehcache.Cache;
+import org.ehcache.CacheManager;
 import org.ehcache.config.builders.CacheConfigurationBuilder;
 import org.ehcache.config.builders.CacheManagerBuilder;
 import org.ehcache.config.builders.ResourcePoolsBuilder;
-import org.ehcache.CacheManager;
-import org.ehcache.Cache;
 import org.ehcache.expiry.Duration;
 import org.ehcache.expiry.Expirations;
 import org.springframework.stereotype.Service;
+
+import java.util.concurrent.TimeUnit;
 
 @Service("CacheService")
 public class MemoryCacheService implements CacheService { 
